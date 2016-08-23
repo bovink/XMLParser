@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<classes>
+    <class name="一班" id="01">
+        <teacher id="01">李燕</teacher>
+        <student id="01" sex="男">张三</student>
+        <student id="02" sex="男">李四</student>
+        <student id="03" sex="男">王五</student>
+    </class>
+    <class name="二班" id="02">
+        <teacher id="05">王飞</teacher>
+        <student id="01" sex="女">张青</student>
+        <student id="02" sex="女">李红</student>
+        <student id="03" sex="男">王蓝</student>
+    </class>
+</classes>
