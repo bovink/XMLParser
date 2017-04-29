@@ -29,6 +29,47 @@ public class DomParser implements XmlParse {
     }
 
     private void parse(InputStream inputStream) {
+
+        printTeacherName(inputStream);
+//        printStudentName(inputStream);
+    }
+
+    @Override
+    public void parse() {
+        parse(inputStream);
+    }
+
+    private void printTeacherName(InputStream inputStream) {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+
+        try {
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document document = builder.parse(inputStream);
+
+            NodeList teachers = document.getElementsByTagName("teacher");
+
+            for (int i = 0; i < teachers.getLength(); i++) {
+                Element e = (Element) teachers.item(i);
+                System.out.println(e.getTextContent());
+            }
+            NodeList students = document.getElementsByTagName("student");
+
+            for (int i = 0; i < students.getLength(); i++) {
+                Element e = (Element) students.item(i);
+                System.out.println(e.getTextContent());
+            }
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (SAXException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void parseEntireFile(InputStream inputStream) {
+
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         try {
 
@@ -71,9 +112,5 @@ public class DomParser implements XmlParse {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-    @Override
-    public void parse() {
-        parse(inputStream);
     }
 }

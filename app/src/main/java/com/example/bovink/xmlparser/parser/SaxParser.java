@@ -50,12 +50,12 @@ public class SaxParser implements XmlParse {
         @Override
         public void startElement(String uri, String localName, String qName, Attributes attributes) {
             switch (qName) {
-                case "class":
-                    System.out.println("=====班级=====");
-                    for (int i = 0; i < attributes.getLength(); i++) {
-                        System.out.println(attributes.getValue(i));
-                    }
-                    break;
+//                case "class":
+//                    System.out.println("=====班级=====");
+//                    for (int i = 0; i < attributes.getLength(); i++) {
+//                        System.out.println(attributes.getValue(i));
+//                    }
+//                    break;
                 case "teacher":
                     System.out.println("=====老师=====");
                     for (int i = 0; i < attributes.getLength(); i++) {
@@ -63,13 +63,13 @@ public class SaxParser implements XmlParse {
                     }
                     printValue = true;
                     break;
-                case "student":
-                    System.out.println("=====学生=====");
-                    for (int i = 0; i < attributes.getLength(); i++) {
-                        System.out.println(attributes.getValue(i));
-                    }
-                    printValue = true;
-                    break;
+//                case "student":
+//                    System.out.println("=====学生=====");
+//                    for (int i = 0; i < attributes.getLength(); i++) {
+//                        System.out.println(attributes.getValue(i));
+//                    }
+//                    printValue = true;
+//                    break;
             }
         }
 
