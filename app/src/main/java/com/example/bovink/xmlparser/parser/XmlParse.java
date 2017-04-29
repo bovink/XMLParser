@@ -7,6 +7,6 @@ package com.example.bovink.xmlparser.parser;
  * @since 2017/4/29
  */
 
-public interface XmlParser {
+public interface XmlParse {
     void parse();
 }

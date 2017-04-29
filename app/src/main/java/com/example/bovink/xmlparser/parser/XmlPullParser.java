@@ -14,7 +14,7 @@ import java.io.InputStream;
  * @since 2017/4/29
  */
 
-public class XmlPullParser implements XmlParser{
+public class XmlPullParser implements XmlParse {
 
     private InputStream inputStream;
 

@@ -16,7 +16,7 @@ import java.io.InputStream;
  * @since 2017/4/29
  */
 
-public class SaxParser implements XmlParser {
+public class SaxParser implements XmlParse {
 
     private InputStream inputStream;
 

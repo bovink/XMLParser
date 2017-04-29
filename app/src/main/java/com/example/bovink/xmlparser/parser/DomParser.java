@@ -20,7 +20,7 @@ import javax.xml.parsers.ParserConfigurationException;
  * @since 2017/4/29
  */
 
-public class DomParser implements XmlParser {
+public class DomParser implements XmlParse {
 
     private InputStream inputStream;
 
